@@ -1,42 +1,26 @@
 const discordNick = "Iordbrack#6142";
 
-discord.addEventListener("click", () => {
-  const discordContent = discord.innerHTML;
-  navigator.clipboard
-    .writeText(discordNick)
-    .then(() => {
-      discord.innerText = "Copiado!";
-      setTimeout(() => {
-        discord.innerHTML = discordContent;
-      }, 1500);
-    })
-    .catch((e) => alert(e.message));
-}); */
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleSwitch = document.getElementById('switch');
 
-const themeSwitch = document.getElementById("switch");
-const html = document.documentElement;
-console.log(html);
+  // Verifica o tema armazenado no localStorage ou usa o tema padrão 'light'
+  const currentTheme = localStorage.getItem('@Gustavo/Theme') || 'light';
+  
+  // Adiciona a classe do tema atual ao elemento raiz
+  document.documentElement.classList.add(currentTheme);
 
-const localTheme = localStorage.getItem("@jos3sLinktree/Theme");
-console.log(localTheme);
-if (localTheme) {
-  if (localTheme === "dark") {
-    html.classList.add("dark");
-    themeSwitch.checked = true;
-  } else {
-    html.classList.remove("dark");
-    themeSwitch.checked = false;
-  }
-} else {
-  localStorage.setItem("@jos3sLinktree/Theme", "light");
-}
+  // Define o estado do checkbox de acordo com o tema atual
+  toggleSwitch.checked = (currentTheme === 'dark');
 
-themeSwitch.addEventListener("change", ({ target: { checked } }) => {
-  if (checked) {
-    html.classList.add("dark");
-    localStorage.setItem("@jos3sLinktree/Theme", "dark");
-  } else {
-    html.classList.remove("dark");
-    localStorage.setItem("@jos3sLinktree/Theme", "light");
-  }
+  // Evento para alternar o tema
+  toggleSwitch.addEventListener('change', () => {
+    if (toggleSwitch.checked) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('@Gustavo/Theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('@Gustavo/Theme', 'light');
+    }
+  });
 });
+
