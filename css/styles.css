@@ -11,6 +11,23 @@ header h1{
   font-family: 'Alegreya SC', serif;
 }
 
+header h2{
+  font-size:1.5rem;
+  font-weight: 100;
+  opacity: 0.5; /* 50% de opacidade */
+  color: var(--green);
+  font-family: 'Alegreya SC', serif;
+}
+
+header h3{
+  font-size:1rem;
+  font-weight: 100;
+  font-style: italic;
+  opacity: 0.5; /* 50% de opacidade */
+  color: var(--green);
+  font-family: 'Alegreya SC', serif;
+}
+
 header > div{
   margin-top:1rem;
   height:2rem;
@@ -67,13 +84,13 @@ main>h3{
   align-items: center;
   justify-content: center;
   gap:1.5rem;
-  opacity: .9;
-  height:28px;
+  opacity: 0.9;
+  height:2px;
   
 }
 
 .social{
-  padding:.2rem;
+  padding:0;
   margin:0;
   transform:scale(1.5);
   font-family: 'Courier New', Courier, monospace;
@@ -138,7 +155,7 @@ label:active:after {
   width: 45px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 2000px) {
   .links {
     flex-direction: column;
     align-items: center;
