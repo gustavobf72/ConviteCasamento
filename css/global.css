@@ -11,6 +11,7 @@ html{
   --text:#29292E;
   --white:#F8F8F8;
   --purple:#94AF96;
+  --green: #4F573D;
 }
 
 html.dark{
@@ -19,6 +20,7 @@ html.dark{
   --text:#F8F8F8;
   --white:#F8F8F8;
   --purple:#94AF96;
+  --green: #F8F8F8;
 }
 
 body{
