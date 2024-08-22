@@ -13,13 +13,18 @@
             padding: 0;
             height: 100%;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .links {
+            margin: 20px 0; /* Ajuste a margem superior e inferior conforme necessário */
         }
         .image-container {
-            display: flex;
+            display: grid;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            width: 100vw;
+            width: 500vw;
         }
         .image-container img {
             max-width: 100%;
@@ -29,16 +34,18 @@
     </style>
 </head>
 <body>
-    <div class="links">
-        <a href="./index.html" 
-        class="link"
-         rel="noreferrer noopener">
-            Voltar ao menu
-        </a>
-        
-    </div>
+    
     <div class="image-container">
+        <div></div>
+        <div class="links">
+            <a href="./index.html" 
+               class="link"
+               rel="noreferrer noopener">
+                Voltar ao menu
+            </a>
+        </div>
         <img src="./img/Imagem-Manual.png" alt="Imagem Centralizada">
+        
     </div>
 </body>
 </html>
