@@ -14,7 +14,7 @@ header h1{
 header h2{
   font-size:1.5rem;
   font-weight: 100;
-  opacity: 0.5; /* 50% de opacidade */
+
   color: var(--green);
   font-family: 'Alegreya SC', serif;
 }
@@ -23,9 +23,22 @@ header h3{
   font-size:1rem;
   font-weight: 100;
   font-style: italic;
-  opacity: 0.5; /* 50% de opacidade */
+ 
   color: var(--green);
   font-family: 'Alegreya SC', serif;
+}
+
+/* Imagem de fundo para o tema claro */
+body {
+  background-image: url('./img/imagem-clara.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease;
+}
+
+/* Imagem de fundo para o tema escuro */
+html.dark body {
+  background-image: url('./img/imagem-escura.jpg');
 }
 
 header > div{
@@ -37,7 +50,32 @@ header > div{
   gap:.5rem;
   color: var(--purple);
 }
+/* Adicione essas linhas no seu CSS para estilizar o background image */
+/* Adicione essas linhas no seu CSS para estilizar o background image */
+.background-image {
+  position: fixed; /* Alterei de absolute para fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+  z-index: -1; /* Adicionei essa linha para que a imagem fique atrás de todos os elementos */
+}
 
+body {
+  background-image: url('./img/imagem-claro.png'); /* Defini a imagem como padrão default */
+}
+
+.light .background-image {
+  background-image: url('./img/imagem-claro.png');
+  opacity: 1;
+}
+
+.dark .background-image {
+  background-image: url('./img/imagem-escuro.png');
+  opacity: 1;
+}
 header > div i{
   font-size: .9rem;
 }
