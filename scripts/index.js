@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const backgroundImage = document.querySelector('.background-image');
 
   // Define a imagem claro como background padrão
-  backgroundImage.style.backgroundImage = "url('./img/imagem-escuro.png')";
+   backgroundImage.style.backgroundImage = "url('./img/imagem-escuro.png')";
   localStorage.setItem('@Gustavo/Theme', 'dark');
 
 
