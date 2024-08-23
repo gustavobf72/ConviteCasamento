@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const backgroundImage = document.querySelector('.background-image');
 
   // Define a imagem claro como background padrão
-   backgroundImage.style.backgroundImage = "url('./img/imagem-escuro.png')";
+   backgroundImage.style.backgroundImage = "url('./img/Imagem-Escuro.png')";
   localStorage.setItem('@Gustavo/Theme', 'dark');
 
 
@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (toggleSwitch.checked) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('@Gustavo/Theme', 'dark');
-      backgroundImage.style.backgroundImage = "url('./img/imagem-escuro.png')";
+      backgroundImage.style.backgroundImage = "url('./img/Imagem-Escuro.png')";
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('@Gustavo/Theme', 'light');
-      backgroundImage.style.backgroundImage = "url('./img/imagem-escuro.png')";
+      backgroundImage.style.backgroundImage = "url('./img/Imagem-Escuro.png')";
     }
   });
 });
