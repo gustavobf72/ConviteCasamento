@@ -136,7 +136,7 @@ main>h3{
 }
 
 .dark .social i{
-  color:white;
+  color: var(--purple);
 }
 
 .social a:hover{
@@ -195,7 +195,7 @@ label:active:after {
 
 @media (max-width: 2000px) {
   .links {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
